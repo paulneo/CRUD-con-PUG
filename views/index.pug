@@ -2,19 +2,19 @@ extends layout
 
 block content
   div.container
-    div.panel.panel-primary
+    div.panel.panel-primary.col-sm-6.col-sm-offset-4(style="padding:initial")
       div.panel-heading.bg-primary.text-center  Sistema de Gestión Estratégica
       div.panel-body
         form.form-horizontal  
           div.form-group
             label.col-sm-2.control-label(for="usuario") Usuario
-            div.col-sm-8.input-group
+            div.col-sm-8.input-group.col-xs-10(style="margin-left:10px")
               span.input-group-addon
-                i.fa.fa-user-o(aria-hidden="true")
+                i.fa.fa-user(aria-hidden="true")
               input#usuario.form-control(type="text",placeholder="Usuario")
           div.form-group
             label.col-sm-2.control-label(for="password") Password
-            div.col-sm-8.input-group
+            div.col-sm-8.input-group.col-xs-10(style="margin-left:10px")
               span.input-group-addon
                 i.fa.fa-cog(aria-hidden="true")
               input#password.form-control(type="text",placeholder="Password")
