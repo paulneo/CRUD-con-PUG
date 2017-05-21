@@ -1,5 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.container
+    form.form-horizontal
+      div.form-group
+        label.col-sm-2.control-label(for="usuario") Usuario
+        div.col-sm-10
+          input#usuario.form-control(type="text",placeholder="Usuario")
+      div.form-group
+        label.col-sm-2.control-label(for="password") Password
+        div.col-sm-10
+          input#password.form-control(type="text",placeholder="Password")
+      div.form-group
+        div.col-sm-offset-2.col-sm-10
+          button.btn.btn-default(type="submit") Ingresar
