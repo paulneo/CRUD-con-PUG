@@ -1,4 +1,4 @@
-var sesionUPeU=localStorage.getItem("Nombre"); 
+var sesionUPeU=localStorage.getItem("Nombre");
 if(sesionUPeU==="INICIO_SESION"){
     outputPeople();
     //document.getElementById("nuevo").style.visibility = "hidden";
@@ -118,7 +118,7 @@ function updatePersonList(transaction,results) {
       for (i = 0; i < results.rows.length; i++) {
         var row = results.rows.item(i);
         buscador += i;
-        console.log("dato"+ row.id);
+        
 
         template +="<tr><td>"+ row.idpersona+" </td> ";
         template +=" <td>"+ row.nombre+" </td>";
