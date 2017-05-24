@@ -91,8 +91,9 @@ block content
               input#v-clave.form-control(type="password",placeholder="Password")           
           div.form-group
             div.col-sm-offset-2.col-sm-10
-              button#guardar.btn.btn-primary(style="margin-right:5px" type="button" ) Guardar
+              input#idpersona(type="hidden"  name="idpersona")
+              a#guardar.btn.btn-primary(style="margin-right:5px" type="button" ) Guardar
               a.btn.btn-danger(href="mainPersona" style="margin-right:5px") Cancelar  
-              button#limpiar.btn.btn-success(type="button" ) Limpiar     
-          
-              
+              button#limpiar.btn.btn-success(type="button" ) Limpiar
+  script(type="text/javascript" src="/javascripts/db.js")
+  script(type="text/javascript" src="/javascripts/operacionDB.js")

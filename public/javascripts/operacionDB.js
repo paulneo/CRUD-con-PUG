@@ -32,7 +32,7 @@ function salirSistema(){
 if(confirm("Esta seguro de Salir...?")===true){
     localStorage.removeItem("INICIO_SESION");
     localStorage.removeItem("IdPersona");
-    document.location.href="index.html";
+    document.location.href="index";
     }
 }
 
@@ -72,14 +72,14 @@ function addAndUpdate() {
         t.executeSql("INSERT INTO persona(nombre,apellidos,dni,nacimiento,genero,profesion, estudios,email,telefono,usuario,clave,validarclave) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)",[nombre,apellidos,dni,nacimiento,genero,profesion,estudio,email,telefono,usuario,clave,validarclave]);
          alert("funciona");
          outputPeople();
-         window.location = "mainPersona.html";
+         window.location = "mainpersona";
          });
          }else{
         mydb.transaction(function(t){
         t.executeSql("UPDATE persona SET nombre=?,apellidos=?,dni=?,nacimiento=?,genero=?,profesion=?, estudios=?,email=?,telefono=?,usuario=?,clave=?,validarclave=? WHERE idpersona=?",[nombre,apellidos,dni,nacimiento,genero,profesion,estudio,email,telefono,usuario,clave,validarclave,document.getElementById("idpersona").value]);
          alert("se actualizo!!!");
          outputPeople();
-         window.location = "mainPersona.html";
+         window.location = "mainpersona";
          });
          }
     }else if(clave === validarclave){
@@ -118,7 +118,7 @@ function updatePersonList(transaction,results) {
       for (i = 0; i < results.rows.length; i++) {
         var row = results.rows.item(i);
         buscador += i;
-        
+
 
         template +="<tr><td>"+ row.idpersona+" </td> ";
         template +=" <td>"+ row.nombre+" </td>";
@@ -126,7 +126,7 @@ function updatePersonList(transaction,results) {
         template +=" <td>"+ row.dni+" </td>";
         template += "<td>"+ row.genero+" </td>";
         template += "<td> <input type= checkbox  class=estado/> </td>";
-        template +=  "<td><a  href='create_person.html?idPersona="+row.idpersona+"' class= 'editarfila'> E </a> <a onclick='deletepersona(" + row.idpersona + ");' class= 'borrarfila'  >X</a> </td></tr>";
+        template +=  "<td><a  href='formpersona?idPersona="+row.idpersona+"' class= 'editarfila'> E </a> <a onclick='deletepersona(" + row.idpersona + ");' class= 'borrarfila' >X</a> </td></tr>";
       }
       if (tabla ) {
         tabla.innerHTML = template;
