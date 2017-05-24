@@ -1,0 +1,40 @@
+footer.main-footer
+  div.pull-right-hidden-xs Anything you want
+  strong Copyright &copy; 2017 
+   a(href="#") Company
+   All rights reserved
+aside.control-sidebar.control-sidebar-dark
+  ul.na.nav-tabs.nav-justified.control-sidebar-tabs
+    li.active
+      a(href="#control-sidebar-home-tab"  data-toggle="tab") 
+        i.fa.fa-home
+    li
+      a(href="#control-sidebar-home-tab" data-toggle="tab")
+        i.fa.fa-gears 
+  div.tab-content
+    div#control-sidebar-home-tab.tab-pane.active            
+      h3.control-sidebar-heading Recent Activity
+      ul.control-sidebar-menu
+        li
+          a(href="javascript:;")
+            i.menu-icon.fa.fa-birthday-cake.bg-red
+            div.menu-info
+              h4.control-sidebar-subheading Langdon's Birthday
+              p Will be 23 on April 24th
+      h3.control-sidebar-heading Task Progress
+      ul.control-sidebar-menu
+        li
+          a(href="javascript:;")
+            h4.control-sidebar-subheading
+              span.pull-right-container
+                span.label.label-danger.pull-right 70%
+            div.progress.progress-xxs
+              div.progress-bar.progress-bar-danger(style="width:70%")
+    div#control-sidebar-stats-tab.tab-pane Stats Tab Content
+      form(method="post")
+        h3.control-sidebar-heading General Settings
+        div.form-group
+          label.control-sidebar-subheading
+            input(type="checkbox" class="pull-right")
+          p  Some information about this general Settings option
+div.control-sidebar-bg 

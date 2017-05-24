@@ -1,9 +1,17 @@
-extends layout
+extends layoutmain
 
 block content
-  div.container(style="padding-top:60px")
-    div.panel.panel-primary.col-sm-6.col-sm-offset-4(style="padding:initial")
-      div.panel-heading.bg-primary.text-center  Sistema de Gestión Estratégica
+  div.content-wrapper 
+    section.content-header
+      h1 Lista
+        small Lista de estudiantes
+      ol.breadcrumb
+        li
+          a(href="#") Level
+            i.fa.fa-dashboard
+        li.active Here
+    div.panel.panel-default(style="padding:initial")
+      div.panel-heading.bg-primary(style="font-size:30px")  Formulario de Registro de Persona
       div.panel-body
         form.form-horizontal  
           div.form-group

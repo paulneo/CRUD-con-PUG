@@ -1,0 +1,49 @@
+extends layoutmain
+
+block content  
+  div.content-wrapper
+    section.content-header
+      h1 Lista
+        small Lista de estudiantes
+      ol.breadcrumb
+        li
+          a(href="#") Level
+            i.fa.fa-dashboard
+        li.active Here
+    section.content
+      div
+        div.user-panel
+          div.input-group
+            label.nombre Nombre
+            label.icon(for="")
+              i.fa.fa-search.i_search
+              input#search.search(type="search" name="" value="" placeholder="Search") 
+            label.l_buscar
+              input#search_button.btn.btn-primary(type="submit" name="" value="Buscar")
+            label.l-nuevo
+              input#nuevo.btn.btn-danger(type="button" onclick="document.location.href='formPersona.html'"   value="Nuevo")                 
+        div
+          div.table
+            table.table.table-bordered
+              thead
+                tr
+                  th #
+                    i.fa.fa-caret-down 
+                  th Nombre
+                    i.fa.fa-caret-down 
+                  th Apellidos
+                    i.fa.fa-caret-down 
+                  th DNI
+                    i.fa.fa-caret-down 
+                  th Genero
+                    i.fa.fa-caret-down 
+                  th Estado
+                    i.fa.fa-caret-down 
+                  th Opciones
+                    i.fa.fa-caret-down 
+              tbody#table
+          section#msgNoExiste
+            div.panel
+              h2.panelTitulo Titulo de panel
+              p Noesiste datos
+                                                     
